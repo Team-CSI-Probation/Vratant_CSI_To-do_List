@@ -41,12 +41,7 @@ function showTasks()
     }
     const pendingnumber = document.querySelector(".pendingnumber");
     pendingnumber.textContent = listArr.length;
-    if(listArr.length>0){
-        deleteAllBtn.classList.add("active");
-    }
-    else{
-        deleteAllBtn.classList.remove("active");
-    }
+    
     let newLiTag = '';
     listArr.forEach((element, index) => {
          newLiTag += `<li> ${element}<span onclick = "deleteTask(${index})"><i class = "fas fa-trash"></i> </span> <button><input type="checkbox"></button></li>`;
