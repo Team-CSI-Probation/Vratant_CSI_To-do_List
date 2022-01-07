@@ -94,6 +94,7 @@ body {
   width: 45px;
   background-color: lightgreen;
   color: white;
+  cursor: pointer;
 
   border: none;
   border-radius: 0 3px 3px;
@@ -117,4 +118,7 @@ body {
   cursor: pointer;
   border-radius: 3px;
   padding: 6px 10px;
+}
+.strik {
+  text-decoration: line-through;
 }

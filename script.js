@@ -2,6 +2,7 @@ const inputBox = document.querySelector(".inputField input");
 const addBtn = document.querySelector(".inputField button");
 const todoList = document.querySelector(".todoList");
 const deleteAllBtn = document.querySelector(".footer button");
+const checkbtn =document.querySelector(".strik");
 inputBox.onkeyup = ()=>
 {
     let userData = inputBox.value;
@@ -44,7 +45,7 @@ function showTasks()
     
     let newLiTag = '';
     listArr.forEach((element, index) => {
-         newLiTag += `<li> ${element}<span onclick = "deleteTask(${index})"><i class = "fas fa-trash"></i> </span> <button><input type="checkbox"></button></li>`;
+         newLiTag += `<li> ${element}<span onclick = "deleteTask(${index})"><i class = "fas fa-trash"></i> </span> <button onclick = "checkbtn(${index})"><i class = "fas fa-check"></i></button></li>`;
     });
     todoList.innerHTML = newLiTag;
     inputBox.value ="";
@@ -63,5 +64,10 @@ deleteAllBtn.onclick = ()=>{
     localStorage.setItem("New Todo", JSON.stringify(listArr));
     showTasks();
 }
+checkbtn.onclick = ()=>{
+    checkbtn.classList.add("strik"); 
+};
+
+
 
 
