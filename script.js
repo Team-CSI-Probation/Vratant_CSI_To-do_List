@@ -39,7 +39,7 @@ function showTasks() {
   listArr.forEach((element, index) => {
     newLiTag += `<li id="element${index}"> ${element}
     <span onclick = "deleteTask(${index})"><i class = "fas fa-trash"></i> </span> 
-    <button onclick = "myfunction(${index})">
+    <button onclick = "checkbtn(${index})">
     <i class = "fas fa-check"></i>
     </button>
     </li>`;
@@ -59,7 +59,6 @@ deleteAllBtn.onclick = () => {
   localStorage.setItem("New Todo", JSON.stringify(listArr));
   showTasks();
 };
-function myfunction(index) {
+const checkbtn = (index) => {
   document.getElementById("element" + index).classList.add("strik");
-  //   showTasks();
-}
+};
