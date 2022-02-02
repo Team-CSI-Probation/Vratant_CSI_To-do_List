@@ -42,6 +42,7 @@ function showTasks() {
     <button onclick = "checkbtn(${index})">
     <i class = "fas fa-check"></i>
     </button>
+    <button id="edit" onclick = "editbtn(${index})">Edit</button>
     </li>`;
   });
   todoList.innerHTML = newLiTag;
@@ -62,3 +63,9 @@ deleteAllBtn.onclick = () => {
 const checkbtn = (index) => {
   document.getElementById("element" + index).classList.add("strik");
 };
+const editbtn = (index) => {
+  var answer= localStorage.key(index);
+  window.localStorage.getItem(listArr[index]);
+
+
+  }
